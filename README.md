@@ -1,6 +1,6 @@
 # Webpack_React
 
-> ## Package Version
+## Package Version
 
 - Webpack : 5.x
 - Node : 16.x
