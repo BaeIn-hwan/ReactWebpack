@@ -70,18 +70,6 @@ module.exports = {
             loader: "babel-loader",
             options: {
               cacheDirectory: true,
-              presets: [
-                [
-                  "@babel/preset-env",
-                  {
-                    targets: {
-                      browsers: ["last 2 chrome versions"],
-                    },
-                  },
-                ],
-                ["@babel/preset-react", { runtime: "automatic" }],
-                ["@babel/preset-typescript", { runtime: "automatic" }],
-              ],
               env: {
                 development: {
                   plugins: [require.resolve("react-refresh/babel")],
