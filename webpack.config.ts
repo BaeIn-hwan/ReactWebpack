@@ -1,11 +1,11 @@
 import webpack from "webpack";
-// Node.js 모듈 path 불러오기
-const path = require("path");
-
-// const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+
+// Node.js 모듈 path 불러오기
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // 개발용 또는 제품용 체크
 const isDev = process.env.NODE_ENV === "development";
@@ -161,10 +161,10 @@ module.exports = {
    * plugins : 추가적인 기능 제공
    */
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   filename: "./index.html",
-    //   template: "public/index.html",
-    // }),
+    new HtmlWebpackPlugin({
+      filename: "./index.html",
+      template: "public/index.html",
+    }),
     new ForkTsCheckerWebpackPlugin({
       async: true,
     }),
