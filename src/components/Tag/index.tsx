@@ -1,8 +1,7 @@
 import * as S from "./styled";
 
-function Tag({ stroke, text }: any): JSX.Element {
-  console.log(stroke);
-  return <S.Tag $stroke={stroke}>{text}</S.Tag>;
+function Tag({ stroke, label }: any): JSX.Element {
+  return <S.Tag $stroke={stroke}>{label}</S.Tag>;
 }
 
 export default Tag;

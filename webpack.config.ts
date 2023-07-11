@@ -3,6 +3,7 @@ import webpack from "webpack";
 const path = require("path");
 
 // const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
@@ -29,7 +30,7 @@ module.exports = {
    * 1개 또는 N개가 될 수 있음
    */
   entry: {
-    app: ["./src/index.tsx"],
+    app: ["./src/index.tsx", "./src/assets/scss/index.scss"],
   },
 
   /**
@@ -95,7 +96,7 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         exclude: /node_modules/,
         use: [
-          "style-loader",
+          isDev ? "style-loader" : MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -166,6 +167,10 @@ module.exports = {
     // }),
     new ForkTsCheckerWebpackPlugin({
       async: true,
+    }),
+    new MiniCssExtractPlugin({
+      filename: "main.css",
+      chunkFilename: "main[id].css",
     }),
   ],
 };

@@ -1,7 +1,7 @@
-import {css} from 'styled-components'
+import { css } from "styled-components";
 
 const Reset = css`
-* {
+  * {
     box-sizing: border-box;
     -webkit-text-size-adjust: none;
   }
@@ -56,9 +56,8 @@ const Reset = css`
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: Pretendard, pretendard, 'Noto Sans KR', 'Malgun Gothic', AppleSDGothic,
-      'apple sd gothic neo', 'noto sans korean', 'noto sans korean regular', 'noto sans cjk kr',
-      'noto sans cjk', Arial, sans-serif;
+    font-family: "Noto Sans KR", "Malgun Gothic", AppleSDGothic,
+      "apple sd gothic neo", sans-serif;
     color: #000;
     line-height: normal;
   }
@@ -117,14 +116,14 @@ const Reset = css`
     }
   }
 
-  input[type='text'],
-  input[type='password'],
-  input[type='time'],
-  input[type='date'],
-  input[type='email'],
-  input[type='tel'],
-  input[type='number'],
-  input[type='search'] {
+  input[type="text"],
+  input[type="password"],
+  input[type="time"],
+  input[type="date"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"] {
     -webkit-appearance: none;
     appearance: none;
   }
@@ -144,10 +143,10 @@ const Reset = css`
   }
 
   button,
-  input[type='button'],
-  input[type='submit'],
-  input[type='reset'],
-  input[type='file'] {
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="file"] {
     border: 0;
     border-radius: 0;
     background: none;
@@ -157,7 +156,8 @@ const Reset = css`
     -webkit-tap-highlight-color: transparent;
   }
 
-  label, a {
+  label,
+  a {
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -191,6 +191,6 @@ const Reset = css`
       display: block;
     }
   }
-`
+`;
 
-export default Reset
+export default Reset;

@@ -1,6 +1,6 @@
 const colors = {
-  white: "#fff",
-  black: "#000",
+  white: `var(--base-white)`,
+  black: `var(--base-black)`,
 };
 
 const theme = {

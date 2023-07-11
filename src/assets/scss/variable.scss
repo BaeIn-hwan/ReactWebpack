@@ -1,0 +1,12 @@
+:root {
+  --base-white: #fff;
+  --base-black: #000;
+
+  &[color-theme="light"] {
+    --text-default: #000;
+  }
+
+  &[color-theme="dark"] {
+    --text-default: #fff;
+  }
+}

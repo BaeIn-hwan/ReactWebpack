@@ -1,7 +1,7 @@
 import { RouteObject } from "react-router-dom";
 
 import SampleIndex from "@/pages/Sample";
-import TagIndex from "@/pages/Sample/Tag";
+import SampleTag from "@/pages/Sample/Tag";
 
 const sampleRoute: RouteObject[] = [
   {
@@ -10,7 +10,7 @@ const sampleRoute: RouteObject[] = [
     children: [
       {
         path: "tag",
-        element: <TagIndex />,
+        element: <SampleTag />,
       },
     ],
   },
