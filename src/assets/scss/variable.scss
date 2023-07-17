@@ -2,6 +2,17 @@
   --base-white: #fff;
   --base-black: #000;
 
+  --system-gray-50: #fafafb;
+  --system-gray-100: #f2f3f5;
+  --system-gray-200: #e6e8ea;
+  --system-gray-300: #d2d6da;
+  --system-gray-400: #b3babf;
+  --system-gray-500: #8b929a;
+  --system-gray-600: #6c747f;
+  --system-gray-700: #4f5763;
+  --system-gray-800: #343c47;
+  --system-gray-900: #1c232b;
+
   &[color-theme="light"] {
     --text-default: #000;
   }

@@ -55,7 +55,7 @@ const Reset = css`
   textarea {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 100%;
     font-family: "Noto Sans KR", "Malgun Gothic", AppleSDGothic,
       "apple sd gothic neo", sans-serif;
     color: #000;

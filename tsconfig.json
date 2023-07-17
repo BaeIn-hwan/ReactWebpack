@@ -17,6 +17,7 @@
     "skipLibCheck": true,
     "typeRoots": ["./node_modules/@types", "types"]
   },
+  "exclude": ["node_modules", ".storybook"],
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs",
