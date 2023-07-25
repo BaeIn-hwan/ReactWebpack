@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import * as I from "./interface";
 
-const tagTheme: any = {
+const tagTheme: Record<string, Record<"bgColor" | "color", string>> = {
   white: {
     bgColor: "var(--base-white)",
     color: "var(--base-black)",
@@ -62,16 +62,22 @@ const medium = css`
 
 export const Tag = styled.span<I.IStyledTag>`
   display: inline-block;
-  ${({ $stroke, theme = "white" }) =>
-    $stroke &&
-    css`
-      border: 1px solid
-        ${theme === "white"
-          ? `${tagTheme[theme].color}`
-          : `${tagTheme[theme].color}59`};
-    `}
+  ${({ $stroke, theme }) => {
+    if ($stroke && theme) {
+      return css`
+        border: 1px solid
+          ${theme === "white"
+            ? `${tagTheme[theme].color}`
+            : `${tagTheme[theme].color}59`};
+      `;
+    } else {
+      return css`
+        border: 1px solid transparent;
+      `;
+    }
+  }}
   ${({ $size }) => ($size === "small" ? small : medium)}
-  background: ${({ theme = "white" }) => tagTheme[theme].bgColor};
-  color: ${({ theme = "white" }) => tagTheme[theme].color};
+  background: ${({ theme }) => tagTheme[theme].bgColor};
+  color: ${({ theme }) => tagTheme[theme].color};
   line-height: 1;
 `;

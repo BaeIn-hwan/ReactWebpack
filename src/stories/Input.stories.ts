@@ -6,7 +6,9 @@ const meta = {
   title: "COMPONENTS/Input",
   component: Input,
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    onInput: { action: "input" },
+  },
 };
 
 export default meta;

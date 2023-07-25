@@ -1,13 +1,14 @@
 import type { InputHTMLAttributes } from "react";
 
-type InputType = "text" | "date";
+type InputTypes = "text" | "date";
+
 export interface IPropsInput {
-  type?: InputType | string;
+  type?: InputTypes | string;
   value?: InputHTMLAttributes<HTMLInputElement>["value"];
   placeholder?: string;
   maxlength?: number;
   disabled?: boolean;
-  onFocus?: Function | undefined;
+  onFocus?: Function;
   onBlur?: Function;
   onInput?: Function;
   onChange?: Function;

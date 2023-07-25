@@ -5,7 +5,7 @@ import Tag from "@/components/Tag";
 const meta = {
   title: "COMPONENTS/Tag",
   component: Tag,
-  tags: ["autodocs"],
+  // tags: ["autodocs"],
   argTypes: {
     label: {
       description: "텍스트 노출",
