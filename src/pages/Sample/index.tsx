@@ -3,8 +3,11 @@ import React, { useState } from "react";
 import Input from "@/components/Input";
 import Tag from "@/components/Tag";
 import Icon from "@/components/Icon";
+import Button from "@/components/Button";
 
 import * as S from "./styled";
+
+import { EButtonSize } from "@/components/Button/interface";
 
 import * as icon from "@/assets/images/icons/index";
 
@@ -25,6 +28,9 @@ function SampleIndex() {
         <Input value={text} onChange={handleText} />
         {text}
       </div>
+
+      <Button text={"헷"} size={EButtonSize.MEDIUM} />
+      <Button text={"헷11"} href={"/"} />
 
       <S.FloatingHome to="/">
         <Icon width={20} height={20}>
